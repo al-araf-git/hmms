@@ -1,0 +1,87 @@
+.card {
+    margin-top: 20rem;
+}
+
+.card-header {
+    margin: 0.65rem;
+}
+
+/* .bg-primary {
+    background-color: #0099e6 !important;
+}
+
+.btn-primary {
+    background-color: #0099e6 !important;
+} */
+
+
+
+/* --------------Reference Data ----------------- */
+
+.content-section {
+    margin: 80px 0px;
+    border: 1px solid #ccc;
+    background: #85a3e0;
+    padding: 15px;
+}
+
+.content-container {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.page-header {
+    padding-left: 30px;
+}
+
+.tab-heading {
+    background: #fff;
+    padding: 20px 30px 0;
+}
+
+.tab-page-header {
+    margin: 30px 0px;
+}
+
+.action-box {
+    margin: 0 0 0 0;
+    min-height: 0;
+    margin-left: 50px;
+    margin-top: -32px;
+    background-color: #0066ff;
+    border-radius: 20px;
+    color: #fff;
+  }
+  
+  .action-box a{
+    text-decoration: none;
+    margin-left: 32px;
+    font-weight: bold;
+ }
+
+  .action-box:hover {
+    background: #fff;
+    border: 2px solid #0066ff;
+    color: #0066ff;
+  }
+
+  .table a {
+    color: #0066ff;
+    cursor: pointer;
+  }
+
+
+/* ---------------------- Monthly Plan Create -------------------------------- */
+
+  .text-space {
+    padding-left: 30px;
+  }
+
+  .table-main {
+    border: 15px solid #c2d1f0;
+    padding: 20px 20px 0px;
+  }
+
+  
+
+
