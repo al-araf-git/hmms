@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Araf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+            <div class="container">    
+                <a class="navbar-brand" href="index.html">
+                    <!-- <img src="images/pie.png" width="30" height="30" class="d-inline-block align-top"
+                        alt="Bethany's Pie Shop Logo"> -->
+                    HMMS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+	                             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+	               <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="reference-data.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Data
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="reference-data.html">Reference Data</a></li>
+                          <li><a class="dropdown-item" href="monthly-plan-create.html">Monthly Plan Create</a></li>
+                        </ul>
+                      </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html">Welcome</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html">Logout</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <br/>
+    <br/>
+    <main role="main">
+      <div class="container">
+        <section class="content-section">
+            <div class="content-container">
+               <header class="page-header">
+                   <h3>Reference Data</h3>
+               </header>
+               <div class="tab-heading">
+                  <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <button class="nav-link active" href="#marketingteam" data-bs-toggle="tab" data-bs-target="#marketingteam" type="button" role="tab" aria-controls="marketingteam" aria-selected="true">Marketing Team</button>
+                      <button class="nav-link" href="#institute" data-bs-toggle="tab" data-bs-target="#institute" type="button" role="tab" aria-controls="institute" aria-selected="false">Institute</button>
+                    </div>
+                  </nav>
+                  <div class="tab-content" id="tab-content">
+                    <div class="tab-pane fade show active" id="marketingteam" role="tabpanel" aria-labelledby="marketingteam">
+                        <header class="tab-page-header">
+                            <h3>Marketing Team List</h3>
+                        </header>
+                        <main class="table-main">
+                          <div class="table-body-heading">
+                            <div class="row">
+                              <div class="col-md-6 pull-left">
+                                <div class="input-group">
+                                  <input class="form-control border rounded-pill" type="search" value="search" id="example-search-input">
+                              </div>
+                              </div>
+                              <div class="col-md-10"></div>
+                              <div class="col-md-2">
+                                <div class="navbar action-box">
+                                  <ul class="nav navbar-nav navbar-right">
+                                      <a><i class="fa fa-plus-circle"></i> New</a>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <br/>
+
+                            <table class="table table-responsive table-striped table-hover text-center">
+                              <thead>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">First</th>
+                                  <th scope="col">Last</th>
+                                  <th scope="col">Handle</th>
+                                  <th scope="col">Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mbo</td>
+                                  <td><a class="btn-link btn-sm">Details</a> | <a class="btn-link btn-sm">Edit</a> | <a class="btn-link btn-sm">Delete</a></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>Something</td>
+                                  <td><a class="btn-link btn-sm">Details</a> | <a class="btn-link btn-sm">Edit</a> | <a class="btn-link btn-sm">Delete</a></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>Larry the Bird</td>
+                                  <td>Bob</td>
+                                  <td>Something</td>
+                                  <td><a class="btn-link btn-sm">Details</a> | <a class="btn-link btn-sm">Edit</a> | <a class="btn-link btn-sm">Delete</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </main>
+                    </div>
+                  
+                    <div class="tab-pane fade" id="institute" role="tabpanel" aria-labelledby="institute">
+                      <header class="tab-page-header">
+                        <h3>Institute List</h3>
+                    </header>
+                    <main class="table-main">
+                      <div class="table-body-heading">
+                        <div class="row">
+                          <div class="col-md-6 pull-left">
+                            <div class="input-group">
+                              <input class="form-control border rounded-pill" type="search" value="search" id="example-search-input">
+                          </div>
+                          </div>
+                          <div class="col-md-10"></div>
+                          <div class="col-md-2">
+                            <div class="navbar action-box">
+                              <ul class="nav navbar-nav navbar-right">
+                                  <a><i class="fa fa-plus-circle"></i> New</a>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <br/>
+
+                        <table class="table table-responsive table-striped table-hover text-center">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Code</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>T1</td>
+                              <td>National Heart Foundation</td>
+                              <td></td>
+                              <td><a class="btn-link btn-sm">Details</a> | <a class="btn-link btn-sm">Edit</a> | <a class="btn-link btn-sm">Delete</a></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>T2</td>
+                              <td>Kidney Foundation Bangladesh</td>
+                              <td></td>
+                              <td><a class="btn-link btn-sm">Details</a> | <a class="btn-link btn-sm">Edit</a> | <a class="btn-link btn-sm">Delete</a></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>T3</td>
+                              <td>Delta Health Care</td>
+                              <td></td>
+                              <td><a class="btn-link btn-sm">Details</a> | <a class="btn-link btn-sm">Edit</a> | <a class="btn-link btn-sm">Delete</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </main>
+                    </div>
+                  </div>
+               </div>             
+            </div>
+          </section>
+      </div>
+    </main>
+
+
+</body>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Araf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">HMMS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav me-auto">
+                        <!-- <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li> -->
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Welcome</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <i class="fa fa-lock" aria-hidden="true"></i> Login
+                        </div>
+                        <div class="card-body">
+                            <form id="loginForm">
+                                <div class="mb-3 row">
+                                    <label class="col-form-label text-md-end col-md-4" for="username">Username:</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="username" class="form-control" name="username"
+                                            placeholder="Enter username" />
+                                        <small id="usernameError" class="text-danger d-none">Username is required</small>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label text-md-end col-md-4" for="password">Password:</label>
+                                    <div class="col-md-8">
+                                        <input type="password" id="password" class="form-control" name="password"
+                                            placeholder="Enter password" />
+                                        <small id="passwordError" class="text-danger d-none">Password is required</small>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <div class="offset-md-4 col-md-8">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="login-rememberme"
+                                                name="rememberMe">
+                                            <label class="form-check-label" for="login-rememberme">Remember me</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <div class="offset-md-4 col-md-8">
+                                        <div class="d-flex align-items-stretch">
+                                            <button type="button" class="btn btn-primary" onclick="validateLogin()">Login</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <small id="loginError" class="text-danger d-none">Invalid username or password</small>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
+<script>
+    function validateLogin() {
+        // Clear previous errors
+        document.getElementById('usernameError').classList.add('d-none');
+        document.getElementById('passwordError').classList.add('d-none');
+        document.getElementById('loginError').classList.add('d-none');
+
+        // Get values from input fields
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        let isValid = true;
+
+        // Validate username and password
+        if (username === "") {
+            document.getElementById('usernameError').classList.remove('d-none');
+            isValid = false;
+        }
+        if (password === "") {
+            document.getElementById('passwordError').classList.remove('d-none');
+            isValid = false;
+        }
+
+        // If valid, check credentials
+        if (isValid) {
+            if (username === 'admin' && password === 'Admin.123') {
+                window.location.href = "reference-data.html";
+            } else {
+                document.getElementById('loginError').classList.remove('d-none');
+            }
+        }
+    }
+</script>
+
+</html>

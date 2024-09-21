@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Araf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+            <div class="container">    
+                <a class="navbar-brand" href="index.html">
+                    <!-- <img src="images/pie.png" width="30" height="30" class="d-inline-block align-top"
+                        alt="Bethany's Pie Shop Logo"> -->
+                    HMMS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="reference-data.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Data
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="reference-data.html">Reference Data</a></li>
+                          <li><a class="dropdown-item" href="monthly-plan-create.html">Monthly Plan Create</a></li>
+                        </ul>
+                      </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html">Welcome</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html">Logout</a>
+                  </li>
+                  <!-- Logout button has been removed as per previous request -->
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <br/>
+    <br/>
+    <main role="main">
+      <div class="container">
+        <section class="content-section">
+            <div class="content-container">
+               <header class="page-header">
+                   <h3>Monthly Plan Create</h3>
+               </header>
+               <br/>
+               <div class="row text-space">
+                <!-- Date Picker -->
+                <label class="col-sm-1 col-form-label" for="date"><strong>Date</strong></label>
+                <div class="col-sm-2">
+                    <input type="date" id="date" class="form-control" />
+                    <small id="dateError" class="text-danger d-none">Please select a date.</small>
+                </div>
+
+                <!-- Working Place Dropdown -->
+                <label class="col-sm-1 col-form-label" for="workingPlace"><strong>Working Place</strong></label>
+                <div class="col-sm-2">
+                    <select id="workingPlace" class="form-select">
+                        <option selected value="">Select</option>
+                        <option value="Mirpur-1">Mirpur-1</option>
+                        <option value="Mirpur-2">Mirpur-2</option>
+                        <option value="Mirpur-6">Mirpur-6</option>
+                        <option value="Mirpur-10">Mirpur-10</option>
+                        <option value="Mirpur-13">Mirpur-13</option>
+                        <option value="Gulshan-1">Gulshan-1</option>
+                        <option value="Dhanmondi">Dhanmondi</option>
+                        <option value="Banani">Banani</option>
+                    </select>
+                    <small id="workingPlaceError" class="text-danger d-none">Please select a working place.</small>
+                </div>
+
+                <!-- Working Shift Dropdown -->
+                <label class="col-sm-2 col-form-label" for="workingShift"><strong>Working Shift</strong></label>
+                <div class="col-sm-2">
+                    <select id="workingShift" class="form-select">
+                        <option selected value="">Select</option>
+                        <option value="Morning">Morning</option>
+                        <option value="Evening">Evening</option>
+                    </select>
+                    <small id="workingShiftError" class="text-danger d-none">Please select a working shift.</small>
+                </div>
+
+                <!-- Buttons -->
+                <div class="col-sm-2">
+                    <button id="goBtn" type="button" class="btn btn-primary text-nowrap mx-2">
+                      Go
+                    </button>
+                    <button id="clearBtn" type="button" class="btn btn-secondary text-nowrap">
+                      Clear
+                    </button>
+                  </div>
+               </div>
+               <br/>
+               <!-- Error Message -->
+               <div id="errorMessage" class="text-danger mb-3"></div>
+
+                <div class="container">
+                    <br/>
+                <main class="table-main mx-3">
+                    <div class="table-body-heading">
+                       <div class="row">
+                           <table id="planTable" class="table table-responsive table-striped table-hover text-center">
+                               <thead>
+                                 <tr>
+                                   <th scope="col">Date</th>
+                                   <th scope="col">Working Place</th>
+                                   <th scope="col">Working Shift</th>
+                                 </tr>
+                               </thead>
+                               <tbody> 
+                                  <!-- Existing Data -->
+                                  <tr>
+                                    <td>15.09.2024(Sunday)</td>
+                                    <td>Mirpur-6</td>
+                                    <td>Morning</td>
+                                  </tr>  
+                                  <tr>
+                                      <td>16.09.2024(Monday)</td>
+                                      <td>Mirpur-2</td>
+                                      <td>Evening</td>
+                                    </tr>
+                                  <tr>
+                                    <td>17.09.2024(Tuesday)</td>
+                                    <td>Mirpur-10</td>
+                                    <td>Evening</td>
+                                  </tr>  
+                                  <tr>
+                                    <td>18.09.2024(Wednesday)</td>
+                                    <td>Mirpur-13</td>
+                                    <td>Morning</td>
+                                  </tr> 
+                                  <tr>
+                                    <td>19.09.2024(Thursday)</td>
+                                    <td>Mirpur-1</td>
+                                    <td>Evening</td>
+                                  </tr>                          
+                               </tbody>
+                             </table>
+                       </div>                       
+                    </div>
+                </main>
+               </div>              
+            </div>
+          </section>
+      </div>
+    </main>
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+    document.getElementById("goBtn").addEventListener("click", function() {
+        // Get values from input fields
+        let date = document.getElementById("date").value;
+        let workingPlace = document.getElementById("workingPlace").value;
+        let workingShift = document.getElementById("workingShift").value;
+
+        // Error message elements
+        let dateError = document.getElementById("dateError");
+        let workingPlaceError = document.getElementById("workingPlaceError");
+        let workingShiftError = document.getElementById("workingShiftError");
+        let generalError = document.getElementById("errorMessage");
+
+        // Reset error messages
+        dateError.classList.add("d-none");
+        workingPlaceError.classList.add("d-none");
+        workingShiftError.classList.add("d-none");
+        generalError.textContent = "";
+
+        let isValid = true;
+
+        // Validate each field
+        if (!date) {
+            dateError.classList.remove("d-none");
+            isValid = false;
+        }
+
+        if (!workingPlace) {
+            workingPlaceError.classList.remove("d-none");
+            isValid = false;
+        }
+
+        if (!workingShift) {
+            workingShiftError.classList.remove("d-none");
+            isValid = false;
+        }
+
+        if (!isValid) {
+            generalError.textContent = "Please fill out all fields correctly.";
+            return;
+        }
+
+        // Format the date to DD.MM.YYYY
+        let selectedDate = new Date(date);
+        let day = String(selectedDate.getDate()).padStart(2, '0');
+        let month = String(selectedDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+        let year = selectedDate.getFullYear();
+        let formattedDate = `${day}.${month}.${year}`;
+
+        // Get the day name
+        let dayName = selectedDate.toLocaleDateString('en-US', { weekday: 'long' });
+
+        // Add new row to the table
+        let table = document.getElementById("planTable").getElementsByTagName("tbody")[0];
+        let newRow = table.insertRow();
+
+        let dateCell = newRow.insertCell(0);
+        let placeCell = newRow.insertCell(1);
+        let shiftCell = newRow.insertCell(2);
+
+        dateCell.textContent = formattedDate + ` (${dayName})`;
+        placeCell.textContent = workingPlace;
+        shiftCell.textContent = workingShift;
+
+        // Optionally, clear the fields after adding the row
+        document.getElementById("date").value = "";
+        document.getElementById("workingPlace").selectedIndex = 0;
+        document.getElementById("workingShift").selectedIndex = 0;
+    });
+
+    document.getElementById("clearBtn").addEventListener("click", function() {
+        // Clear all input fields
+        document.getElementById("date").value = "";
+        document.getElementById("workingPlace").selectedIndex = 0;
+        document.getElementById("workingShift").selectedIndex = 0;
+
+        // Hide all error messages
+        document.getElementById("dateError").classList.add("d-none");
+        document.getElementById("workingPlaceError").classList.add("d-none");
+        document.getElementById("workingShiftError").classList.add("d-none");
+        document.getElementById("errorMessage").textContent = "";
+    });
+</script>
+
+</html>
